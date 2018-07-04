@@ -10,7 +10,7 @@ import com.project.pickplace.dto.PinInfoDTO;
 @Repository
 public class PinDAOImplXML implements PinDAO {
 	
-	// Mybatis ±¸º°À» À§ÇÑ namespace º¯¼ö
+	// Mybatis êµ¬ë³„ì„ ìœ„í•œ namespace ë³€ìˆ˜
 	private final String NAMESPACE = "pininfo.";
 	
 	@Autowired

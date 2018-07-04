@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.project.pickplace.dao.PinDAO;
 import com.project.pickplace.dto.PinInfoDTO;
 
-
+@Controller
 @RestController
 @RequestMapping("/pin")
 public class PinController {
@@ -25,20 +26,19 @@ public class PinController {
 	@Qualifier("pinDAOImplXML")
 	PinDAO pindao;
 	
-	//RestController ≈◊Ω∫∆Æ
+	//RestController ÌÖåÏä§Ìä∏
 	@RequestMapping("/hello")
 	public String hello() {
 		return "hello!";
 	}
 	
-	//«…µÓ∑œ
+	//ÌïÄ Îì±Î°ù
 	@RequestMapping(value="/insert", method=POST)
 	public ResponseEntity<String> insert(@RequestBody PinInfoDTO pindto)
 	{
-		System.out.println("insert POST... : " + pindto.toString());
 		logger.info("insert POST ...");
 		ResponseEntity<String> responseEntity = null;
-		logger.info("±€æ≤±‚ : " + pindto.toString());
+		logger.info("ÌïÄ Îì±Î°ù: " + pindto.toString());
 		
 		try {
 			pindao.insert(pindto);

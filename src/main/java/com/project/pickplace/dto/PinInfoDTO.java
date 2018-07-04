@@ -4,42 +4,41 @@ import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
-/*PNUM	NUMBER(13,0)	No		1	Áöµµ¹øÈ£
-MNUM	NUMBER(13,0)	No		2	°Ô½Ã±Û¹øÈ£
-PMEMO	VARCHAR2(20 BYTE)	Yes		3	°Ô½Ã±Û¸Ş¸ğ
-PTHEME	VARCHAR2(20 BYTE)	No		4	ÇÉÅ×¸¶
-BEGIN_LAT	VARCHAR2(30 BYTE)	No		5	½ÃÀÛÀ§µµ
-BEGIN_LNG	VARCHAR2(30 BYTE)	No		6	½ÃÀÛ°æµµ
-PIN_LAT	VARCHAR2(30 BYTE)	No		7	ÇÉÀ§µµ
-PIN_LNG	VARCHAR2(30 BYTE)	No		8	ÇÉ°æµµ
-RATE	NUMBER(10,0)	Yes		9	ÆòÁ¡(RATE/2)*/
+/*PNUM	NUMBER(13,0)	No		1	ì§€ë„ë²ˆí˜¸
+MNUM	NUMBER(13,0)	No		2	ê²Œì‹œê¸€ë²ˆí˜¸
+PMEMO	VARCHAR2(20 BYTE)	Yes		3	ê²Œì‹œê¸€ë©”ëª¨
+PTHEME	VARCHAR2(20 BYTE)	No		4	í•€í…Œë§ˆ
+BEGIN_LAT	VARCHAR2(30 BYTE)	No		5	ì‹œì‘ìœ„ë„
+BEGIN_LNG	VARCHAR2(30 BYTE)	No		6	ì‹œì‘ê²½ë„
+PIN_LAT	VARCHAR2(30 BYTE)	No		7	í•€ìœ„ë„
+PIN_LNG	VARCHAR2(30 BYTE)	No		8	í•€ê²½ë„
+RATE	NUMBER(10,0)	Yes		9	í‰ì (RATE/2)*/
 
 
 /**
- * ¼±ÅÃµÈ PIN ÀúÀå µ¥ÀÌÅÍº£ÀÌ½º(PinInfo)
+ * ì„ íƒëœ PIN ì €ì¥ ë°ì´í„°ë² ì´ìŠ¤(PinInfo)
  */
-@Data // getter, setter, toString, requiredArgsConstructor(Notnull ÆÄ¶ó¹ÌÅÍ¸¸ »ı¼ºÀÚ¿¡ Æ÷ÇÔ)
-@NoArgsConstructor	// ±âº» »ı¼ºÀÚ
+@Data // getter, setter, toString, requiredArgsConstructor(Notnull íŒŒë¼ë¯¸í„°ë§Œ ìƒì„±ìì— í¬í•¨)
+@NoArgsConstructor	// ê¸°ë³¸ ìƒì„±ì
 public class PinInfoDTO {
 
 	@NotNull
-	private Integer pnum;	 // Áöµµ¹øÈ£
+	private Integer pnum;	 // ì§€ë„ë²ˆí˜¸
 	@NotNull
-	private Integer mnum;	 // °Ô½Ã±Û¹øÈ£ 
-	private String pmemo;	 // °Ô½Ã±Û¸Ş¸ğ
+	private Integer mnum;	 // ê²Œì‹œê¸€ë²ˆí˜¸ 
+	private String pmemo;	 // ê²Œì‹œê¸€ë©”ëª¨
 	@NotNull
-	private String ptheme;	 // ÇÉÅ×¸¶
+	private String ptheme;	 // í•€í…Œë§ˆ
 	@NotNull
-	private String pinLat;	 // ÇÉÀ§µµ 
+	private String pinLat;	 // í•€ìœ„ë„ 
 	@NotNull
-	private String pinLng;	 // ÇÉ°æµµ 
-	private Integer rate;	 // ÆòÁ¡ 
+	private String pinLng;	 // í•€ê²½ë„ 
+	private Integer rate;	 // í‰ì  
 	
 	/**
-	 * RequiredConstructor ÇÏ¸é ¿ø·¡ ÀÚµ¿ »ı¼º µÇ¾î¾ß ÇÏ´Âµ¥ ¾È µÅ¼­ ¼öµ¿ »ı¼º..
-	 * pnumÀ» Á¦¿ÜÇÑ ¸ğµç °ª ÀÔ·Â »ı¼ºÀÚ 
+	 * RequiredConstructor í•˜ë©´ ì›ë˜ ìë™ ìƒì„± ë˜ì–´ì•¼ í•˜ëŠ”ë° ì•ˆ ë¼ì„œ ìˆ˜ë™ ìƒì„±..
+	 * pnumì„ ì œì™¸í•œ ëª¨ë“  ê°’ ì…ë ¥ ìƒì„±ì 
 	 */
 	public PinInfoDTO(@NotNull Integer mnum, String pmemo, @NotNull String ptheme, 
 					  @NotNull String pinLat, @NotNull String pinLng, Integer rate) {
@@ -53,7 +52,7 @@ public class PinInfoDTO {
 	}
 	
 	/**
-	 * Notnull°ª¸¸ »ı¼ºÇÏ´Â »ı¼ºÀÚ
+	 * Notnullê°’ë§Œ ìƒì„±í•˜ëŠ” ìƒì„±ì
 	 */
 	public PinInfoDTO(@NotNull Integer mnum, @NotNull String ptheme, 
 					  @NotNull String pinLat, @NotNull String pinLng) {

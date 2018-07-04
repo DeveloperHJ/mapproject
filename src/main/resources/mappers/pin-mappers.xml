@@ -12,7 +12,7 @@
 	BEGIN_LAT	VARCHAR2(30 BYTE)	No		5	시작위도
 	BEGIN_LNG	VARCHAR2(30 BYTE)	No		6	시작경도
 	PIN_LAT	VARCHAR2(30 BYTE)	No		7	핀위도
-	PIN_LNG	VARCHAR2(30 BYTE)	No		8	핀경도
+	PIN_LNG	VARCHAR2(30 BYTE)	No		8	핀경도 
 	RATE	NUMBER(10,0)	Yes		9	평점(RATE/2) -->
 
 <!-- Mapper 이름: pininfo -->

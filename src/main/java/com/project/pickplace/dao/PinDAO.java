@@ -5,26 +5,26 @@ import java.util.List;
 import com.project.pickplace.dto.PinInfoDTO;
 
 
-// PinInfo µ¥ÀÌÅÍº£ÀÌ½º¿¡ µé¾î°¡´Â °ü·Ã ¸Ş¼Òµå DAO 
+// PinInfo ë°ì´í„°ë² ì´ìŠ¤ì— ë“¤ì–´ê°€ëŠ” ê´€ë ¨ ë©”ì†Œë“œ DAO 
 public interface PinDAO {
-	// ÇÉ µî·Ï
+	// í•€ ë“±ë¡
 	void insert(PinInfoDTO pindto);
 	
 	/**
-	 * ÀüÃ¼ ÇÉ ¸ñ·Ï °¡Á®¿À±â
+	 * ì „ì²´ í•€ ëª©ë¡ ê°€ì ¸ì˜¤ê¸°
 	 * @return List<PinInfoDTO> list;
 	 */
 	List<PinInfoDTO> pinList();
 	
 	/** 
-	 * ÇØ´ç ID, ÇØ´ç MapInfo¿¡ ÇØ´ç ÇÏ´Â ÇÉ ¸ñ·Ï °¡Á®¿À±â 
-	 * @param kakaoEmail : Ä«Ä«¿À ÀÌ¸ŞÀÏ
-	 * @param mnum : ¸Ê ³Ñ¹ö
+	 * í•´ë‹¹ ID, í•´ë‹¹ MapInfoì— í•´ë‹¹ í•˜ëŠ” í•€ ëª©ë¡ ê°€ì ¸ì˜¤ê¸° 
+	 * @param kakaoEmail : ì¹´ì¹´ì˜¤ ì´ë©”ì¼
+	 * @param mnum : ë§µ ë„˜ë²„
 	 * @return List<PinInfoDTO> list;
 	 */
 	List<PinInfoDTO> pinList(String kakaoEmail, String mnum);
 	
-	// ÇÉ ¼öÁ¤
+	// í•€ ìˆ˜ì •
 	
-	// ÇÉ »èÁ¦
+	// í•€ ì‚­ì œ
 }

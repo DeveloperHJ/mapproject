@@ -8,37 +8,37 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /*
-MNUM NUMBER(13,0)	No		1	±Û¹øÈ£
-KAKAO_EMAIL	VARCHAR2(20 BYTE)	No		2	±Û¾´ÀÌ
-MTITLE	VARCHAR2(30 BYTE)	No		3	Á¦¸ñ
-MLOCAL	VARCHAR2(20 BYTE)	No		4	Áö¿ª
-MCONTENT	VARCHAR2(40 BYTE)	Yes		5	¸Ş¸ğ
-MCDATE	DATE	No	SYSDATE 	6	µî·Ï³¯Â¥
-MUDATE	DATE	No	SYSDATE 	7	¼öÁ¤³¯Â¥
+MNUM NUMBER(13,0)	No		1	ê¸€ë²ˆí˜¸
+KAKAO_EMAIL	VARCHAR2(20 BYTE)	No		2	ê¸€ì“´ì´
+MTITLE	VARCHAR2(30 BYTE)	No		3	ì œëª©
+MLOCAL	VARCHAR2(20 BYTE)	No		4	ì§€ì—­
+MCONTENT	VARCHAR2(40 BYTE)	Yes		5	ë©”ëª¨
+MCDATE	DATE	No	SYSDATE 	6	ë“±ë¡ë‚ ì§œ
+MUDATE	DATE	No	SYSDATE 	7	ìˆ˜ì •ë‚ ì§œ
 */
 
-@Data // getter, setter, toString, requiredArgsConstructor(Notnull ÆÄ¶ó¹ÌÅÍ »ı¼ºÀÚ)
-@NoArgsConstructor	// ±âº» »ı¼ºÀÚ
+@Data // getter, setter, toString, requiredArgsConstructor(Notnull íŒŒë¼ë¯¸í„° ìƒì„±ì)
+@NoArgsConstructor	// ê¸°ë³¸ ìƒì„±ì
 public class MapInfoDTO {
 	@NotNull
-	private Integer mnum;	 // ±Û¹øÈ£
+	private Integer mnum;	 // ê¸€ë²ˆí˜¸
 	
 	@NotNull
-	private String kakaoEmail; // ±Û¾´ÀÌ
+	private String kakaoEmail; // ê¸€ì“´ì´
 	
 	@NotNull
-	private String mtitle; 	 // Á¦¸ñ
+	private String mtitle; 	 // ì œëª©
 	
 	@NotNull
-	private String mlocal;	 // Áö¿ª
+	private String mlocal;	 // ì§€ì—­
 	
-	private String mcontent; // ¸Ş¸ğ 
-	private Date mcdate;	 // µî·Ï³¯Â¥
-	private Date mudate;	 // ¼öÁ¤³¯Â¥
+	private String mcontent; // ë©”ëª¨ 
+	private Date mcdate;	 // ë“±ë¡ë‚ ì§œ
+	private Date mudate;	 // ìˆ˜ì •ë‚ ì§œ
 	
 	@NotNull 
-	private String beginLat; // ½ÃÀÛÀ§µµ
+	private String beginLat; // ì‹œì‘ìœ„ë„
 	
 	@NotNull
-	private String beginLng; // ½ÃÀÛ°æµµ 
+	private String beginLng; // ì‹œì‘ê²½ë„ 
 }

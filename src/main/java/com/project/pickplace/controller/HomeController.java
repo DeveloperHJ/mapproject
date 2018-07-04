@@ -36,4 +36,9 @@ public class HomeController {
 		return "homehj";
 	}
 	
+	// 메인지도 띄워보려고 생성
+	@RequestMapping(value = "/map")
+	public String mainMap() {
+		return "mainmap";
+	}
 }
